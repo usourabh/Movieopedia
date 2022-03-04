@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+:root {
+     --maincolor: #000000;
+     --secondarycolor: #FF9C00;
+}
+
+* {
+     box-sizing: border-box;
+}
+body {
+
+     background-color: var(--maincolor);
+     font-family: 'Montserrat', sans-serif;
+     margin: 0;
+} 
+
+header{
+     margin: 5px;
+     padding: 0.5rem;
+     display: flex;
+     justify-content: center;
+     background-color: var(--maincolor);
+}
+
+.search{
+     padding: 10px;
+     color: var(--secondarycolor);
+     font-size: 18px;
+     background-color: transparent;
+     border: 2px solid var(--secondarycolor);
+     border-radius: 50px;
+     font-family: inherit;
+}
+
+.search::placeholder{
+     color: var(--secondarycolor);
+}
+/* when search box is being typed it wont show any outline */
+.search:focus{ 
+     outline: none;
+     color: var(--secondarycolor);
+}
+
+main{
+     color: #ffffff;
+     display: flex;
+     flex-wrap: wrap;
+}
+
+.movie{
+     width: 300px;
+     margin: 1.5rem;
+     background-color: var(--maincolor);
+     overflow: hidden;
+     position: relative;
+     border-radius: 15px;
+}
+.movie img{
+     width: 100%;
+}
+
+.movie-info{
+     color: #ffffff;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0.5rem 1rem 1rem;
+     letter-spacing: 1px;
+}
+
+.movie-info span{
+     background-color:bisque;
+     padding: 0.25rem;
+     border-radius: 3px;
+     font-weight: bolder;
+}
+
+.movie-info span.green{
+     background-color: green;
+     color: #ffffff;
+}
+
+.movie-info span.orange{
+     color: #ffffff;
+     background-color: orange;
+}
+
+.movie-info span.red{
+     color: #ffffff;
+     background-color: red;
+}
+
+.overview{
+     background-color: #FF9C00;
+     color: var(--maincolor);
+     padding: 2rem;
+     position: absolute;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     max-height: 100%;
+     transform: translateY(101%);
+     transition:transform ease-in 0.3s;
+}
+.movie:hover .overview{
+     transform: translateY(0);
+}
